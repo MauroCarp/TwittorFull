@@ -1,4 +1,12 @@
+var url = window.location.href;
+var swUrl = '/TwittorFull/sw.js';
+
+
 if (navigator.serviceWorker) {
+
+    if(url.includes('localhost')){
+        swUrl = '/sw.js';
+    }
     navigator.serviceWorker.register('/sw.js');
 }
 
